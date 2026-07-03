@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>VTCN</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html, body {
+  height: 100%;
+  background: #000;
+  color: #fff;
+  font-family: 'Inter', sans-serif;
+  overflow: hidden;
+}
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero iframe {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 177.78vh; /* 16:9 ratio */
+  height: 100vh;
+  min-width: 100%;
+  min-height: 100%;
+  transform: translate(-50%, -50%);
+  border: none;
+  pointer-events: none;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  z-index: 10;
+  font-size: 12px;
+  letter-spacing: 0.05em;
+}
+
+footer .tagline {
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: 300;
+}
+
+footer .tagline a {
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+footer .tagline a:hover {
+  color: #fff;
+}
+
+footer .social a {
+  display: inline-flex;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.5);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+footer .social a:hover {
+  color: #fff;
+}
+
+footer .social svg {
+  width: 18px;
+  height: 18px;
+}
+</style>
+</head>
+<body>
+
+<section class="hero">
+  <iframe src="https://player.vimeo.com/video/1206834233?background=1&autoplay=1&loop=1&muted=1&quality=1080p" allow="autoplay; fullscreen" allowfullscreen></iframe>
+</section>
+
+<footer>
+  <span class="tagline">VTCN is the professional slop cannon dump of <a href="https://vieren.studio" target="_blank">VIEREN.STUDIO</a></span>
+  <span class="social">
+    <a href="https://instagram.com/vtcn" target="_blank" aria-label="Instagram">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="2" y="2" width="20" height="20" rx="5"/>
+        <circle cx="12" cy="12" r="5"/>
+        <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
+      </svg>
+    </a>
+  </span>
+</footer>
+
+</body>
+</html>

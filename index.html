@@ -14,29 +14,42 @@ html, body {
   background: #000;
   color: #fff;
   font-family: 'Inter', sans-serif;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  padding: 48px 24px 32px;
+}
+
+.logo img {
+  height: 32px;
+  width: auto;
+}
+
+.videos {
+  display: flex;
+  gap: 16px;
+  padding: 0 24px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.videos .video-wrap {
+  flex: 1;
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
   overflow: hidden;
 }
 
-.hero {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.hero iframe {
+.videos .video-wrap iframe {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 177.78vh; /* 16:9 ratio */
-  height: 100vh;
-  min-width: 100%;
-  min-height: 100%;
-  transform: translate(-50%, -50%);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   border: none;
-  pointer-events: none;
 }
 
 footer {
@@ -88,13 +101,44 @@ footer .social svg {
   width: 18px;
   height: 18px;
 }
+
+@media (max-width: 768px) {
+  .logo {
+    padding: 32px 16px 24px;
+  }
+
+  .logo img {
+    height: 24px;
+  }
+
+  .videos {
+    flex-direction: column;
+    gap: 12px;
+    padding: 0 16px;
+  }
+
+  footer {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+  }
+}
 </style>
 </head>
 <body>
 
-<section class="hero">
-  <iframe src="https://player.vimeo.com/video/1206834233?background=1&autoplay=1&loop=1&muted=1&quality=1080p" allow="autoplay; fullscreen" allowfullscreen></iframe>
-</section>
+<div class="logo">
+  <img src="vtcnhandle.png" alt="VTCN">
+</div>
+
+<div class="videos">
+  <div class="video-wrap">
+    <iframe src="https://player.vimeo.com/video/1206834233?background=1&autoplay=1&loop=1&muted=1&quality=1080p" allow="autoplay; fullscreen" allowfullscreen></iframe>
+  </div>
+  <div class="video-wrap">
+    <iframe src="https://player.vimeo.com/video/1206861008?background=1&autoplay=1&loop=1&muted=1&quality=1080p" allow="autoplay; fullscreen" allowfullscreen></iframe>
+  </div>
+</div>
 
 <footer>
   <span class="tagline">VTCN is the professional slop cannon dump of <a href="https://vieren.studio" target="_blank">VIEREN.STUDIO</a></span>

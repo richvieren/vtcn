@@ -4,8 +4,6 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>VTCN</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -13,16 +11,90 @@ html, body {
   height: 100%;
   background: #000;
   color: #fff;
-  font-family: 'Inter', sans-serif;
+  font-family: monospace;
 }
 
-.ascii-logo {
-  text-align: center;
+.terminal-header {
   padding: 48px 24px 32px;
-  font-family: monospace;
-  font-size: 14px;
-  line-height: 1.15;
+  display: flex;
+  justify-content: center;
+}
+
+.terminal-box {
+  border: 1px solid #333;
+  border-radius: 2px;
+  position: relative;
+  padding: 24px 32px;
+  display: flex;
+  gap: 48px;
+  max-width: 720px;
+  width: 100%;
+}
+
+.terminal-box::before {
+  content: ' VTCN ';
+  position: absolute;
+  top: -9px;
+  left: 16px;
+  background: #000;
+  padding: 0 8px;
+  color: #ed7582;
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+}
+
+.terminal-left {
   white-space: pre;
+  font-size: 13px;
+  line-height: 1.2;
+  color: #666;
+}
+
+.terminal-right {
+  font-size: 13px;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 180px;
+}
+
+.terminal-right .slop {
+  color: #f1c043;
+  margin-bottom: 4px;
+}
+
+.terminal-right .divider {
+  color: #333;
+  margin: 6px 0;
+}
+
+.terminal-right .social-line {
+  color: #f1c043;
+}
+
+.terminal-right .social-line a {
+  color: #f1c043;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.terminal-right .social-line a:hover {
+  color: #fff;
+}
+
+.terminal-right .reach-out {
+  margin-top: 2px;
+}
+
+.terminal-right .reach-out a {
+  color: #ed7582;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.terminal-right .reach-out a:hover {
   color: #fff;
 }
 
@@ -67,6 +139,7 @@ footer {
   -webkit-backdrop-filter: blur(12px);
   z-index: 10;
   font-size: 12px;
+  font-family: monospace;
   letter-spacing: 0.05em;
 }
 
@@ -75,10 +148,13 @@ footer .tagline {
   font-weight: 300;
 }
 
+footer .tagline strong {
+  color: rgba(255, 255, 255, 0.7);
+}
+
 footer .tagline a {
   color: rgba(255, 255, 255, 0.7);
   text-decoration: none;
-  font-weight: 500;
 }
 
 footer .tagline a:hover {
@@ -88,6 +164,9 @@ footer .tagline a:hover {
 footer .social {
   display: flex;
   gap: 12px;
+  margin-left: auto;
+  position: absolute;
+  right: 24px;
 }
 
 footer .social a {
@@ -108,9 +187,23 @@ footer .social svg {
 }
 
 @media (max-width: 768px) {
-  .ascii-logo {
-    font-size: 8px;
+  .terminal-header {
     padding: 32px 16px 24px;
+  }
+
+  .terminal-box {
+    flex-direction: column;
+    gap: 16px;
+    padding: 20px 16px;
+  }
+
+  .terminal-left {
+    font-size: 7px;
+  }
+
+  .terminal-right {
+    font-size: 12px;
+    min-width: unset;
   }
 
   .videos {
@@ -120,21 +213,39 @@ footer .social svg {
   }
 
   footer {
+    position: relative;
     flex-direction: column;
     gap: 12px;
     text-align: center;
+  }
+
+  footer .social {
+    position: static;
+    margin-left: 0;
   }
 }
 </style>
 </head>
 <body>
 
-<pre class="ascii-logo">██╗   ██╗████████╗ ██████╗███╗   ██╗
+<div class="terminal-header">
+  <div class="terminal-box">
+    <div class="terminal-left">██╗   ██╗████████╗ ██████╗███╗   ██╗
 ██║   ██║╚══██╔══╝██╔════╝████╗  ██║
 ██║   ██║   ██║   ██║     ██╔██╗ ██║
 ╚██╗ ██╔╝   ██║   ██║     ██║╚██╗██║
  ╚████╔╝    ██║   ╚██████╗██║ ╚████║
-  ╚═══╝     ╚═╝    ╚═════╝╚═╝  ╚═══╝</pre>
+  ╚═══╝     ╚═╝    ╚═════╝╚═╝  ╚═══╝</div>
+    <div class="terminal-right">
+      <div class="slop">Professional slop dump</div>
+      <div class="divider">─────────────────────</div>
+      <div class="social-line">IG  <a href="https://instagram.com/vtcn" target="_blank">@vtcn</a></div>
+      <div class="social-line">X   <a href="https://x.com/richvieren" target="_blank">@richvieren</a></div>
+      <div class="divider">─────────────────────</div>
+      <div class="reach-out"><a href="mailto:richard@vieren.studio">reach out ↗</a></div>
+    </div>
+  </div>
+</div>
 
 <div class="videos">
   <div class="video-wrap">

@@ -16,15 +16,14 @@ html, body {
   font-family: 'Inter', sans-serif;
 }
 
-.logo {
-  display: flex;
-  justify-content: center;
+.ascii-logo {
+  text-align: center;
   padding: 48px 24px 32px;
-}
-
-.logo img {
-  height: 80px;
-  width: auto;
+  font-family: monospace;
+  font-size: 14px;
+  line-height: 1.15;
+  white-space: pre;
+  color: #fff;
 }
 
 .videos {
@@ -109,12 +108,9 @@ footer .social svg {
 }
 
 @media (max-width: 768px) {
-  .logo {
+  .ascii-logo {
+    font-size: 8px;
     padding: 32px 16px 24px;
-  }
-
-  .logo img {
-    height: 56px;
   }
 
   .videos {
@@ -133,9 +129,12 @@ footer .social svg {
 </head>
 <body>
 
-<div class="logo">
-  <img src="vtcnlogo.png" alt="VTCN">
-</div>
+<pre class="ascii-logo">██╗   ██╗████████╗ ██████╗███╗   ██╗
+██║   ██║╚══██╔══╝██╔════╝████╗  ██║
+██║   ██║   ██║   ██║     ██╔██╗ ██║
+╚██╗ ██╔╝   ██║   ██║     ██║╚██╗██║
+ ╚████╔╝    ██║   ╚██████╗██║ ╚████║
+  ╚═══╝     ╚═╝    ╚═════╝╚═╝  ╚═══╝</pre>
 
 <div class="videos">
   <div class="video-wrap">

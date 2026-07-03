@@ -48,12 +48,15 @@ html, body {
   white-space: pre;
   font-size: 13px;
   line-height: 1.2;
-  color: #666;
+  background: linear-gradient(180deg, #ed7582 0%, #c44a5a 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .terminal-right {
   font-size: 13px;
-  line-height: 1.6;
+  line-height: 1.3;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -61,37 +64,41 @@ html, body {
 }
 
 .terminal-right .slop {
-  color: #f1c043;
-  margin-bottom: 4px;
+  color: #fff;
+  margin-bottom: 2px;
 }
 
 .terminal-right .divider {
   color: #333;
-  margin: 6px 0;
+  margin: 4px 0;
 }
 
 .terminal-right .social-line {
-  color: #f1c043;
+  color: #fff;
 }
 
 .terminal-right .social-line a {
-  color: #f1c043;
+  color: #fff;
   text-decoration: none;
   transition: color 0.2s;
 }
 
 .terminal-right .social-line a:hover {
-  color: #fff;
+  color: #ed7582;
 }
 
 .terminal-right .reach-out {
-  margin-top: 2px;
+  margin-top: 0;
 }
 
 .terminal-right .reach-out a {
-  color: #ed7582;
+  color: #fff;
   text-decoration: none;
   transition: color 0.2s;
+}
+
+.terminal-right .reach-out a:hover {
+  color: #ed7582;
 }
 
 .terminal-right .reach-out a:hover {

@@ -321,6 +321,135 @@ html, body {
   font-size: 14px;
 }
 
+/* ── MATRIX SECTION ── */
+
+.section-matrix {
+  background: #ed7582;
+  padding: 80px 24px;
+}
+
+.matrix-inner {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.matrix-heading {
+  font-family: 'Inter', sans-serif;
+  font-size: 48px;
+  font-weight: 900;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  color: #000;
+  margin-bottom: 48px;
+}
+
+.matrix-wrap {
+  position: relative;
+  display: flex;
+  gap: 0;
+}
+
+.matrix-y-label {
+  writing-mode: vertical-lr;
+  transform: rotate(180deg);
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-right: 16px;
+}
+
+.matrix-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.matrix-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3px;
+}
+
+.matrix-cell {
+  background: #000;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 180px;
+}
+
+.matrix-cell .cell-number {
+  font-family: monospace;
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.35);
+  margin-bottom: 12px;
+}
+
+.matrix-cell .cell-title {
+  font-family: 'Inter', sans-serif;
+  font-size: 20px;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: #fff;
+  margin-bottom: 8px;
+}
+
+.matrix-cell .cell-desc {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.matrix-cell.cell-highlight {
+  background: #000;
+  outline: 2px solid #fff;
+  outline-offset: -2px;
+}
+
+.matrix-cell.cell-highlight .cell-title {
+  color: #ed7582;
+}
+
+.matrix-cell.cell-highlight .cell-desc {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.matrix-x-labels {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3px;
+  margin-top: 12px;
+}
+
+.matrix-x-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+
+.matrix-callout {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: #000;
+  margin-top: 32px;
+  text-align: right;
+}
+
 /* ── CTA SECTION ── */
 
 .section-cta {
@@ -500,6 +629,31 @@ footer .social svg {
     grid-row: 3;
   }
 
+  .section-matrix {
+    padding: 56px 16px;
+  }
+
+  .matrix-heading {
+    font-size: 32px;
+  }
+
+  .matrix-y-label {
+    display: none;
+  }
+
+  .matrix-cell {
+    padding: 24px;
+    min-height: 140px;
+  }
+
+  .matrix-cell .cell-title {
+    font-size: 16px;
+  }
+
+  .matrix-cell .cell-desc {
+    font-size: 13px;
+  }
+
   .section-cta .big-text {
     font-size: 44px;
   }
@@ -551,6 +705,45 @@ footer .social svg {
 <div class="section section-about">
   <p>We started making weird things with AI before anyone knew what to call it. Some of it was terrible. Some of it made people stop scrolling.</p>
   <p>VTCN is where all of it lives. The tests that worked, the ones that didn't, and everything we learned between. Expect behind the scenes, moodboards, references, and the occasional breakdown of how something got made.</p>
+</div>
+
+<!-- ── MATRIX ── -->
+<div class="section-matrix">
+  <div class="matrix-inner">
+    <div class="matrix-heading">The AI × Taste Matrix</div>
+    <div class="matrix-wrap">
+      <div class="matrix-y-label">deep technical skill ← → surface-level tools</div>
+      <div class="matrix-body">
+        <div class="matrix-grid">
+          <div class="matrix-cell">
+            <div class="cell-number">01 / The Engineers</div>
+            <div class="cell-title">The Engineers</div>
+            <div class="cell-desc">Can build anything. Can't make anything worth watching.</div>
+          </div>
+          <div class="matrix-cell cell-highlight">
+            <div class="cell-number">02 / VTCN</div>
+            <div class="cell-title">VTCN</div>
+            <div class="cell-desc">Custom tools. Real taste. The only quadrant that doesn't have a ceiling.</div>
+          </div>
+          <div class="matrix-cell">
+            <div class="cell-number">03 / The Prompt Jockeys</div>
+            <div class="cell-title">The Prompt Jockeys</div>
+            <div class="cell-desc">Same tools, same output. So is everyone else.</div>
+          </div>
+          <div class="matrix-cell">
+            <div class="cell-number">04 / The Tastemakers</div>
+            <div class="cell-title">The Tastemakers</div>
+            <div class="cell-desc">Great eye, platform ceiling. Limited by what the tools allow.</div>
+          </div>
+        </div>
+        <div class="matrix-x-labels">
+          <div class="matrix-x-label">no taste</div>
+          <div class="matrix-x-label">meticulous taste</div>
+        </div>
+      </div>
+    </div>
+    <div class="matrix-callout">← VTCN works at that end.</div>
+  </div>
 </div>
 
 <!-- ── STUDIO ── -->

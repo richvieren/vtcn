@@ -325,67 +325,69 @@ html, body {
 
 .capabilities {
   background: #ed7582;
-  padding: 32px 24px;
+  padding: 48px 24px;
   display: flex;
-  align-items: start;
-  gap: 0;
+  justify-content: center;
+}
+
+.capabilities-box {
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 2px;
+  position: relative;
+  padding: 32px 40px;
+  max-width: 900px;
+  width: 100%;
+  display: flex;
+  gap: 40px;
   font-family: monospace;
 }
 
-.capabilities-label {
-  flex: 0 0 180px;
-  font-size: 11px;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
+.capabilities-box::before {
+  content: ' CAPABILITIES ';
+  position: absolute;
+  top: -9px;
+  left: 16px;
+  background: #ed7582;
+  padding: 0 8px;
   color: #000;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding-top: 2px;
-}
-
-.capabilities-label::before {
-  content: '';
-  width: 16px;
-  height: 1px;
-  background: #000;
-}
-
-.capabilities-columns {
-  flex: 1;
-  display: flex;
-  gap: 48px;
+  font-family: monospace;
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 0.05em;
 }
 
 .cap-group {
   flex: 1;
+}
+
+.cap-group + .cap-group {
   border-left: 1px solid rgba(0, 0, 0, 0.2);
-  padding-left: 24px;
+  padding-left: 40px;
 }
 
 .cap-group-title {
   font-family: monospace;
-  font-size: 11px;
-  letter-spacing: 0.2em;
+  font-size: 13px;
+  font-weight: bold;
   text-transform: uppercase;
   color: #000;
-  margin-bottom: 16px;
+  margin-bottom: 4px;
 }
 
-.cap-items {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 8px 24px;
+.cap-group-divider {
+  font-family: monospace;
+  font-size: 13px;
+  color: rgba(0, 0, 0, 0.3);
+  margin-bottom: 12px;
 }
 
 .cap-item {
-  font-size: 11px;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: rgba(0, 0, 0, 0.6);
+  font-family: monospace;
+  font-size: 13px;
+  line-height: 1.8;
+  color: rgba(0, 0, 0, 0.7);
   display: flex;
   align-items: center;
-  gap: 8px;
 }
 
 .cap-item::after {
@@ -574,29 +576,20 @@ footer .social svg {
   }
 
   .capabilities {
+    padding: 32px 16px;
+  }
+
+  .capabilities-box {
     flex-direction: column;
-    gap: 20px;
+    gap: 24px;
     padding: 24px 16px;
   }
 
-  .capabilities-label {
-    flex: none;
-  }
-
-  .capabilities-columns {
-    flex-direction: column;
-    gap: 24px;
-  }
-
-  .cap-group {
+  .cap-group + .cap-group {
     border-left: none;
     padding-left: 0;
     border-top: 1px solid rgba(0, 0, 0, 0.2);
-    padding-top: 16px;
-  }
-
-  .cap-items {
-    grid-template-columns: 1fr;
+    padding-top: 24px;
   }
 
   .section-cta .big-text {
@@ -649,29 +642,26 @@ footer .social svg {
 
 <!-- ── CAPABILITIES ── -->
 <div class="capabilities">
-  <div class="capabilities-label">CAPABILITIES</div>
-  <div class="capabilities-columns">
+  <div class="capabilities-box">
     <div class="cap-group">
       <div class="cap-group-title">Branded Content</div>
-      <div class="cap-items">
-        <div class="cap-item">Social Campaigns</div>
-        <div class="cap-item">Viral Concepts</div>
-        <div class="cap-item">Platform Native</div>
-        <div class="cap-item">Real Time Production</div>
-        <div class="cap-item">Influencer Content</div>
-        <div class="cap-item">AI Shorts</div>
-      </div>
+      <div class="cap-group-divider">─────────────────────</div>
+      <div class="cap-item">Social Campaigns</div>
+      <div class="cap-item">Viral Concepts</div>
+      <div class="cap-item">Platform Native</div>
+      <div class="cap-item">Real Time Production</div>
+      <div class="cap-item">Influencer Content</div>
+      <div class="cap-item">AI Shorts</div>
     </div>
     <div class="cap-group">
       <div class="cap-group-title">Narrative</div>
-      <div class="cap-items">
-        <div class="cap-item">Film & Episodic</div>
-        <div class="cap-item">Story Development</div>
-        <div class="cap-item">Brand Films</div>
-        <div class="cap-item">AI Cinematography</div>
-        <div class="cap-item">World Building</div>
-        <div class="cap-item">Character Design</div>
-      </div>
+      <div class="cap-group-divider">─────────────────────</div>
+      <div class="cap-item">Film & Episodic</div>
+      <div class="cap-item">Story Development</div>
+      <div class="cap-item">Brand Films</div>
+      <div class="cap-item">AI Cinematography</div>
+      <div class="cap-item">World Building</div>
+      <div class="cap-item">Character Design</div>
     </div>
   </div>
 </div>

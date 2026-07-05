@@ -149,6 +149,49 @@ html, body {
   margin-top: 16px;
 }
 
+/* ── CLIENTS CAROUSEL ── */
+
+.section-clients {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 24px 80px;
+}
+
+.section-clients .clients-label {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.4);
+  margin-bottom: 24px;
+}
+
+.client-carousel-wrap {
+  overflow: hidden;
+  position: relative;
+  mask-image: linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%);
+}
+
+.client-carousel-track {
+  display: flex;
+  gap: 48px;
+  align-items: center;
+  animation: client-scroll 20s linear infinite;
+  width: max-content;
+}
+
+.client-carousel-track img {
+  height: 20px;
+  opacity: 0.4;
+  flex-shrink: 0;
+  filter: brightness(0) invert(1);
+}
+
+@keyframes client-scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
 /* ── STUDIO SECTION ── */
 
 .section-studio {
@@ -638,6 +681,27 @@ footer .social svg {
   </div>
 </div>
 
+
+<!-- ── CLIENTS ── -->
+<div class="section-clients">
+  <div class="clients-label">Founded by production and music industry veterans, with past clients such as:</div>
+  <div class="client-carousel-wrap">
+    <div class="client-carousel-track">
+      <img src="clients/tnf.png" alt="The North Face" style="height:40px">
+      <img src="clients/samsung.png" alt="Samsung">
+      <img src="clients/aoki.png" alt="Steve Aoki">
+      <img src="clients/levis.png" alt="Levis">
+      <img src="clients/rb.png" alt="Red Bull">
+      <img src="clients/natgeo.png" alt="National Geographic">
+      <img src="clients/tnf.png" alt="The North Face" style="height:40px">
+      <img src="clients/samsung.png" alt="Samsung">
+      <img src="clients/aoki.png" alt="Steve Aoki">
+      <img src="clients/levis.png" alt="Levis">
+      <img src="clients/rb.png" alt="Red Bull">
+      <img src="clients/natgeo.png" alt="National Geographic">
+    </div>
+  </div>
+</div>
 
 <!-- ── CAPABILITIES ── -->
 <div class="capabilities">

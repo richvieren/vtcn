@@ -216,14 +216,9 @@ html, body {
 
 .studio-gallery {
   flex: 1;
-  display: flex;
-  gap: 4px;
-}
-
-.gallery-left {
-  flex: 2;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 65% 1fr;
+  grid-template-rows: 1fr auto;
   gap: 4px;
 }
 
@@ -236,20 +231,23 @@ html, body {
 
 .gallery-cell iframe {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  top: 50%;
+  left: 50%;
+  width: 110%;
+  height: 110%;
+  transform: translate(-50%, -50%);
   border: none;
 }
 
 .gallery-video-landscape {
-  position: relative;
-  padding-bottom: 56.25%;
+  grid-column: 1;
+  grid-row: 1;
+  aspect-ratio: 16/9;
 }
 
 .gallery-left-bottom {
-  flex: 1;
+  grid-column: 1;
+  grid-row: 2;
   display: flex;
   gap: 4px;
 }
@@ -259,7 +257,8 @@ html, body {
 }
 
 .gallery-portrait {
-  flex: 1;
+  grid-column: 2;
+  grid-row: 1 / 3;
 }
 
 .gallery-ethos {
@@ -550,15 +549,24 @@ footer .social svg {
   }
 
   .studio-gallery {
-    flex-direction: column;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+  }
+
+  .gallery-video-landscape {
+    grid-column: 1;
+    grid-row: 1;
   }
 
   .gallery-portrait {
+    grid-column: 1;
+    grid-row: 2;
     aspect-ratio: 9/16;
   }
 
   .gallery-left-bottom {
-    flex-direction: row;
+    grid-column: 1;
+    grid-row: 3;
   }
 
   .capabilities {
@@ -662,27 +670,25 @@ footer .social svg {
     <p>The tech changes every week. The taste doesn't.</p>
   </div>
   <div class="studio-gallery">
-    <div class="gallery-left">
-      <div class="gallery-cell gallery-video-landscape">
-        <iframe src="https://player.vimeo.com/video/1188208422?background=1&autoplay=1&loop=1&muted=1&quality=1080p" allow="autoplay; fullscreen" allowfullscreen></iframe>
-      </div>
-      <div class="gallery-left-bottom">
-        <div class="gallery-cell gallery-thumb">
-          <iframe src="https://player.vimeo.com/video/1207021689?background=1&autoplay=1&loop=1&muted=1&quality=1080p" allow="autoplay; fullscreen" allowfullscreen></iframe>
-        </div>
-        <div class="gallery-ethos">
-          <div class="ethos-label">OUR ETHOS</div>
-          <div class="ethos-lines">
-            BE UNHINGED.<br>
-            FULL SENDS ONLY.<br>
-            THERE IS ALWAYS BEAUTY IN CHAOS.
-          </div>
-          <div class="ethos-footer"></div>
-        </div>
-      </div>
+    <div class="gallery-cell gallery-video-landscape">
+      <iframe src="https://player.vimeo.com/video/1188208422?background=1&autoplay=1&loop=1&muted=1&quality=1080p" allow="autoplay; fullscreen" allowfullscreen></iframe>
     </div>
     <div class="gallery-cell gallery-portrait">
       <iframe src="https://player.vimeo.com/video/1207020494?background=1&autoplay=1&loop=1&muted=1&quality=1080p" allow="autoplay; fullscreen" allowfullscreen></iframe>
+    </div>
+    <div class="gallery-left-bottom">
+      <div class="gallery-cell gallery-thumb">
+        <iframe src="https://player.vimeo.com/video/1207021689?background=1&autoplay=1&loop=1&muted=1&quality=1080p" allow="autoplay; fullscreen" allowfullscreen></iframe>
+      </div>
+      <div class="gallery-ethos">
+        <div class="ethos-label">OUR ETHOS</div>
+        <div class="ethos-lines">
+          BE UNHINGED.<br>
+          FULL SENDS ONLY.<br>
+          THERE IS ALWAYS BEAUTY IN CHAOS.
+        </div>
+        <div class="ethos-footer"></div>
+      </div>
     </div>
   </div>
 </div>

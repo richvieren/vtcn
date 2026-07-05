@@ -202,7 +202,6 @@ html, body {
   display: flex;
   gap: 48px;
   align-items: start;
-  border-top: 1px solid #222;
 }
 
 .studio-text {
@@ -444,6 +443,98 @@ html, body {
   margin-left: auto;
 }
 
+/* ── PORTFOLIO ── */
+
+.section-portfolio {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 80px 24px;
+}
+
+.portfolio-tabs {
+  display: flex;
+  gap: 32px;
+  margin-bottom: 32px;
+  border-bottom: 1px solid #222;
+  padding-bottom: 16px;
+}
+
+.portfolio-tab {
+  font-family: monospace;
+  font-size: 13px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.35);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: color 0.2s;
+}
+
+.portfolio-tab:hover {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.portfolio-tab.active {
+  color: #f1c043;
+}
+
+.portfolio-tab .coming-soon {
+  font-size: 9px;
+  color: rgba(255, 255, 255, 0.2);
+  margin-left: 6px;
+  vertical-align: middle;
+}
+
+.portfolio-panel {
+  display: none;
+}
+
+.portfolio-panel.active {
+  display: block;
+}
+
+.portfolio-videos {
+  display: flex;
+  gap: 16px;
+}
+
+.portfolio-videos .video-wrap {
+  flex: 1;
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+}
+
+.portfolio-videos .video-wrap iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.portfolio-videos .video-wrap.single {
+  max-width: 800px;
+}
+
+.portfolio-coming-soon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 300px;
+  border: 1px solid #222;
+  border-radius: 2px;
+  font-family: monospace;
+  font-size: 13px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.2);
+}
+
 /* ── CTA SECTION ── */
 
 .section-cta {
@@ -633,6 +724,23 @@ footer .social svg {
     padding-top: 24px;
   }
 
+  .section-portfolio {
+    padding: 56px 16px;
+  }
+
+  .portfolio-tabs {
+    gap: 16px;
+  }
+
+  .portfolio-videos {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .portfolio-coming-soon {
+    height: 200px;
+  }
+
   .section-cta .big-text {
     font-size: 44px;
   }
@@ -670,43 +778,6 @@ footer .social svg {
   </div>
 </div>
 
-<!-- ── VIDEOS ── -->
-<div class="videos">
-  <div class="video-wrap">
-    <iframe src="https://player.vimeo.com/video/1206834233?background=1&autoplay=1&loop=1&muted=1&quality=1080p" allow="autoplay; fullscreen" allowfullscreen></iframe>
-  </div>
-  <div class="video-wrap">
-    <iframe src="https://player.vimeo.com/video/1206861008?background=1&autoplay=1&loop=1&muted=1&quality=1080p" allow="autoplay; fullscreen" allowfullscreen></iframe>
-  </div>
-</div>
-
-
-<!-- ── CAPABILITIES ── -->
-<div class="capabilities">
-  <div class="capabilities-box">
-    <div class="cap-group">
-      <div class="cap-group-title">Branded Content</div>
-      <div class="cap-group-divider">─────────────────────</div>
-      <div class="cap-item">Social Campaigns</div>
-      <div class="cap-item">Viral Concepts</div>
-      <div class="cap-item">Platform Native</div>
-      <div class="cap-item">Real Time Production</div>
-      <div class="cap-item">Influencer Content</div>
-      <div class="cap-item">AI Shorts</div>
-    </div>
-    <div class="cap-group">
-      <div class="cap-group-title">Narrative</div>
-      <div class="cap-group-divider">─────────────────────</div>
-      <div class="cap-item">Film & Episodic</div>
-      <div class="cap-item">Story Development</div>
-      <div class="cap-item">Brand Films</div>
-      <div class="cap-item">AI Cinematography</div>
-      <div class="cap-item">World Building</div>
-      <div class="cap-item">Character Design</div>
-    </div>
-  </div>
-</div>
-
 <!-- ── STUDIO ── -->
 <div class="section-studio">
   <div class="studio-text">
@@ -737,6 +808,61 @@ footer .social svg {
         <div class="ethos-footer"></div>
       </div>
     </div>
+  </div>
+</div>
+
+<!-- ── CAPABILITIES ── -->
+<div class="capabilities">
+  <div class="capabilities-box">
+    <div class="cap-group">
+      <div class="cap-group-title">Branded Content</div>
+      <div class="cap-group-divider">─────────────────────</div>
+      <div class="cap-item">Social Campaigns</div>
+      <div class="cap-item">Viral Concepts</div>
+      <div class="cap-item">Platform Native</div>
+      <div class="cap-item">Real Time Production</div>
+      <div class="cap-item">Influencer Content</div>
+      <div class="cap-item">AI Shorts</div>
+    </div>
+    <div class="cap-group">
+      <div class="cap-group-title">Narrative</div>
+      <div class="cap-group-divider">─────────────────────</div>
+      <div class="cap-item">Film & Episodic</div>
+      <div class="cap-item">Story Development</div>
+      <div class="cap-item">Brand Films</div>
+      <div class="cap-item">AI Cinematography</div>
+      <div class="cap-item">World Building</div>
+      <div class="cap-item">Character Design</div>
+    </div>
+  </div>
+</div>
+
+<!-- ── PORTFOLIO ── -->
+<div class="section-portfolio">
+  <div class="portfolio-tabs">
+    <button class="portfolio-tab active" data-tab="wizardcore">Wizardcore</button>
+    <button class="portfolio-tab" data-tab="csc">Counting Sheep Club</button>
+    <button class="portfolio-tab" data-tab="hooters">Hooters Air <span class="coming-soon">(coming soon)</span></button>
+  </div>
+  <div class="portfolio-panel active" data-panel="wizardcore">
+    <div class="portfolio-videos">
+      <div class="video-wrap">
+        <iframe src="https://player.vimeo.com/video/1206834233?background=1&autoplay=1&loop=1&muted=1&quality=1080p" allow="autoplay; fullscreen" allowfullscreen></iframe>
+      </div>
+      <div class="video-wrap">
+        <iframe src="https://player.vimeo.com/video/1206861008?background=1&autoplay=1&loop=1&muted=1&quality=1080p" allow="autoplay; fullscreen" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+  <div class="portfolio-panel" data-panel="csc">
+    <div class="portfolio-videos">
+      <div class="video-wrap">
+        <iframe src="https://player.vimeo.com/video/1187639129?background=1&autoplay=1&loop=1&muted=1&quality=1080p" allow="autoplay; fullscreen" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+  <div class="portfolio-panel" data-panel="hooters">
+    <div class="portfolio-coming-soon">Coming Soon</div>
   </div>
 </div>
 
@@ -787,5 +913,15 @@ footer .social svg {
   </span>
 </footer>
 
+<script>
+document.querySelectorAll('.portfolio-tab').forEach(function(tab) {
+  tab.addEventListener('click', function() {
+    document.querySelectorAll('.portfolio-tab').forEach(function(t) { t.classList.remove('active'); });
+    document.querySelectorAll('.portfolio-panel').forEach(function(p) { p.classList.remove('active'); });
+    tab.classList.add('active');
+    document.querySelector('[data-panel="' + tab.dataset.tab + '"]').classList.add('active');
+  });
+});
+</script>
 </body>
 </html>
